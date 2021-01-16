@@ -17,6 +17,12 @@ def create
   end
 end
 
+def destroy
+  onepayment=Onepayment.find(params[:id])
+  onepayment.destroy
+  redirect_to root_path
+end
+
 
 private
 def onepayment_params
