@@ -30,7 +30,7 @@
         <a href="/#" class="btn2">編集</a>
         </div>
         <div class="btn">
-        <a href="/#" class="btn3">削除</a>
+        <%= link_to '削除', onepayment_path(onepayment.id), class: 'btn3',method: :delete %>
         </div>
       </div>
     </div>

@@ -59,6 +59,10 @@
   margin: 50px 0 0 0;
 }
 
+.btn{
+  text-decoration: none;
+}
+
 .btn1{
   text-decoration: none;
   color:white;
