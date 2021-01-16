@@ -1,0 +1,176 @@
+<div class="contents-row">
+  <div class="container">
+    <div class="form">
+      <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
+      
+
+      
+       <h3>1台目</h3>
+       <div>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+        
+        <div>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+       </div>
+
+
+        <div>
+        <%= form.text_field :one_investment, placeholder: "投資" %>
+        </div>
+        <div>
+        <%= form.text_field :one_recovery, placeholder: "回収" %>
+        </div>
+        <div>
+        <%= form.text_field :one_balance_of_payment, placeholder: "収支" %>
+        </div>
+        <div>
+        <%= form.text_area :one_rationale, placeholder: "メモ", rows: "10" %>
+        </div>
+        <div>
+        <%= form.collection_select(:month_id, Month.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+        <div>
+        <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+        <div>
+        <%= form.submit "SEND" %>
+        </div>
+      <% end %>
+    </div>
+
+ 
+
+
+    <!--<div class="form">
+    <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
+     <h3>2台目</h3>
+     <div>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+
+     <div>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
+
+ 
+
+
+     <div>
+      <%= form.text_field :hoge, placeholder: "投資" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "回収" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "収支" %>
+      </div>
+      <div>
+      <%= form.text_area :hoge, placeholder: "メモ", rows: "10" %>
+      </div>
+      <div>
+      <%= form.submit "SEND" %>
+      </div>
+      <% end %>
+
+    </div>
+
+
+
+    <div class="form">
+    <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
+    <h3>3台目</h3>
+    <div>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+
+    <div>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
+
+
+     <div>
+      <%= form.text_field :hoge, placeholder: "投資" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "回収" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "収支" %>
+      </div>
+      <div>
+      <%= form.text_area :hoge, placeholder: "メモ", rows: "10" %>
+      </div>
+      <div>
+      <%= form.submit "SEND" %>
+      </div>
+      <% end %>
+    </div>
+    
+
+
+
+    <div class="form">
+    <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
+    <h3>4台目</h3>
+    <div>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+
+    <div>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
+
+
+     <div>
+      <%= form.text_field :hoge, placeholder: "投資" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "回収" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "収支" %>
+      </div>
+      <div>
+      <%= form.text_area :hoge, placeholder: "メモ", rows: "10" %>
+      </div>
+      <div>
+      <%= form.submit "SEND" %>
+      </div>
+      <% end %>
+    </div>
+
+
+
+    <div class="form">
+    <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
+    <h3>5台目</h3>
+    <div>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        </div>
+
+    <div>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+      </div>
+
+
+     <div>
+      <%= form.text_field :hoge, placeholder: "投資" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "回収" %>
+      </div>
+      <div>
+      <%= form.text_field :hoge, placeholder: "収支" %>
+      </div>
+      <div>
+      <%= form.text_area :hoge, placeholder: "メモ", rows: "10" %>
+      </div>
+
+      <div>
+      <%= form.submit "SEND" %>
+      </div>
+    <% end %>
+    </div>-->
+  </div>
+</div>
