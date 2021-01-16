@@ -4,22 +4,23 @@
     <a href="/onepayments/new"class="new-botan">新規作成</a>
     </div>
     <div class="content-total">
-    Total収支 40000円
+    <%="Total収支 #{@onepayments.sum(:one_balance_of_payment).to_i}円"%>
     </div>
     
   </div>
   <div class="contents">
+  <%@onepayments.each do |onepayment|%>
     <div class="content">
       <div class="content-days">
         <div class="content-month">
-        11月
-        </div>
+        <%=onepayment.month.name%>
+        </div>      
         <div class="content-day">
-        11日
+        <%=onepayment.day.name%>
         </div>
       </div>
       <div class="payments">
-      10000円
+      <%="#{onepayment.one_balance_of_payment}円"%>
       </div>
       <div class="three-btn">
         <div class="btn">
@@ -33,81 +34,13 @@
         </div>
       </div>
     </div>
+    <% end %>
 
-    <div class="content">
-      <div class="content-days">
-        <div class="content-month">
-        11月
-        </div>
-        <div class="content-day">
-        11日
-        </div>
-      </div>
-      <div class="payments">
-      10000円
-      </div>
-      <div class="three-btn">
-        <div class="btn">
-        <a href="/#" class="btn1">詳細</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn2">編集</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn3">削除</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="content">
-    <div class="content-days">
-        <div class="content-month">
-        11月
-        </div>
-        <div class="content-day">
-        11日
-        </div>
-      </div>
-      <div class="payments">
-      10000円
-      </div>
-      <div class="three-btn">
-        <div class="btn">
-        <a href="/#" class="btn1">詳細</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn2">編集</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn3">削除</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="content">
-    <div class="content-days">
-        <div class="content-month">
-        11月
-        </div>
-        <div class="content-day">
-        11日
-        </div>
-      </div>
-      <div class="payments">
-      10000円
-      </div>
-      <div class="three-btn">
-        <div class="btn">
-        <a href="/#" class="btn1">詳細</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn2">編集</a>
-        </div>
-        <div class="btn">
-        <a href="/#" class="btn3">削除</a>
-        </div>
-      </div>
-    </div>
+
+
+    
   </div>
 </div>
 

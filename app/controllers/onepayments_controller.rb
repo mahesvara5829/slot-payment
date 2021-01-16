@@ -1,7 +1,7 @@
 class OnepaymentsController < ApplicationController
 
 def index
-  @onepayments=Onepayment.all
+  @onepayments=Onepayment.all.order("id DESC")
 end
 
 def new
