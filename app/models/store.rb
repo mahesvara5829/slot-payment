@@ -1,15 +1,13 @@
 class Store < ActiveHash::Base
   self.data = [
     { id: 1, name: '稼働店舗' },
-    { id: 2, name: '経済' },
-    { id: 3, name: '政治' },
-    { id: 4, name: '地域' },
-    { id: 5, name: '国際' },
-    { id: 6, name: 'IT' },
-    { id: 7, name: 'エンタメ' },
-    { id: 8, name: 'スポーツ' },
-    { id: 9, name: 'グルメ' },
-    { id: 10, name: 'その他' }
+    { id: 2, name: '梅田123+N' },
+    { id: 3, name: 'マルハン梅田' },
+    { id: 4, name: '大東洋梅田' },
+    { id: 5, name: '梅田CLUB-D' },
+    { id: 6, name: '123難波' },
+    { id: 7, name: '楽園難波' },
+    { id: 8, name: 'テキサス門真' }
   ]
 
   include ActiveHash::Associations
