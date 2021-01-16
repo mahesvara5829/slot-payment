@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+ 
+
+
+.header{
+  display:flex;
+  height:100px;
+  width:100vw;
+  background-color: gray;
+}
+
+.header-name{
+  padding: 20px 0 0 50px;
+  font-size :40px;
+  width:70%;
+}
+
+.header-users{
+  display:flex;
+  list-style:none;
+  justify-content: space-around;
+  padding: 40px 0 0 0;
+  width:30%;
+
+}
+
+.header-user{
+  text-decoration: none;
+  color:white;
+}
+
+footer{
+  background-color:gray;
+  height:100px;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
