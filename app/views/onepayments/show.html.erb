@@ -1,0 +1,31 @@
+<div>
+<a href="/#"class="new-botan">トップへ戻る</a>
+</div>
+<div class="btn">
+  <%= link_to '編集', edit_onepayment_path(@onepayment.id), class: 'btns' %>
+</div>
+<div class="btn">
+  <%= link_to '削除', onepayment_path(@onepayment.id), class: 'btns',method: :delete %>
+</div>
+<div>
+<%=@onepayment.month.name%>
+<%=@onepayment.day.name%>
+</div>
+<div>
+<%="店名   #{@onepayment.store.name}"%>
+</div>
+<div>
+<%="機種   #{@onepayment.kisyu.name}"%>
+</div>
+<div>
+<%="投資   #{@onepayment.one_investment}"%>
+</div>
+<div>
+<%="回収   #{@onepayment.one_recovery}"%>
+</div>
+<div>
+<%="収支   #{@onepayment.one_balance_of_payment}"%>
+</div>
+<div>
+<%="メモ   #{@onepayment.one_rationale}"%>
+</div>

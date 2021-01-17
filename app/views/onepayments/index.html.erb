@@ -24,7 +24,7 @@
       </div>
       <div class="three-btn">
         <div class="btn">
-        <a href="/#" class="btn1">詳細</a>
+        <%= link_to '詳細', onepayment_path(onepayment.id), class: 'btn1' %>
         </div>
         <div class="btn">
         <%= link_to '編集', edit_onepayment_path(onepayment.id), class: 'btn2' %>
