@@ -8,33 +8,33 @@
       
 
       
-       <h3>1台目</h3>
+       <h3>結果入力</h3>
        <div>
-        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"genre-select"}) %>
+        <%= form.collection_select(:store_id, Store.all, :id, :name, {}, {class:"store-select"}) %>
         </div>
         
         <div>
-        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"genre-select"}) %>
+        <%= form.collection_select(:kisyu_id, Kisyu.all, :id, :name, {}, {class:"kisyu-select"}) %>
        </div>
 
 
         <div>
-        <%= form.text_field :one_investment, placeholder: "投資" %>
+        <%= form.text_field :one_investment, placeholder: "投資" ,class:"items-text"%>
         </div>
         <div>
-        <%= form.text_field :one_recovery, placeholder: "回収" %>
+        <%= form.text_field :one_recovery, placeholder: "回収" ,class:"items-text"%>
         </div>
         <div>
-        <%= form.text_field :one_balance_of_payment, placeholder: "収支" %>
+        <%= form.text_field :one_balance_of_payment, placeholder: "収支" ,class:"items-text"%>
         </div>
         <div>
-        <%= form.text_area :one_rationale, placeholder: "メモ", rows: "10" %>
+        <%= form.text_area :one_rationale, placeholder: "メモ", rows: "10" ,class:"items-text"%>
         </div>
         <div>
-        <%= form.collection_select(:month_id, Month.all, :id, :name, {}, {class:"genre-select"}) %>
+        <%= form.collection_select(:month_id, Month.all, :id, :name, {}, {class:"month-select"}) %>
         </div>
         <div>
-        <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"genre-select"}) %>
+        <%= form.collection_select(:day_id, Day.all, :id, :name, {}, {class:"day-select"}) %>
         </div>
         <div>
         <%= form.submit "SEND" %>
