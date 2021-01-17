@@ -9,11 +9,12 @@ def new
 end
 
 def create
-  onepayment=Onepayment.new(onepayment_params)
-  if onepayment.save
+  @onepayment=Onepayment.new(onepayment_params)
+  if @onepayment.save
     redirect_to root_path
   else
     render :new
+    @onepayment=Onepayment.new(onepayment_params)
   end
 end
 
@@ -28,11 +29,12 @@ def edit
 end
 
 def update
-  onepayment=Onepayment.find(params[:id])
-  if onepayment.update(onepayment_params)
+  @onepayment=Onepayment.find(params[:id])
+  if @onepayment.update(onepayment_params)
     redirect_to root_path
   else
     render :edit
+    @onepayment=Onepayment.find(params[:id])
   end
 end
 
