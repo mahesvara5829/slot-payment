@@ -23,6 +23,20 @@ def destroy
   redirect_to root_path
 end
 
+def edit
+  @onepayment=Onepayment.find(params[:id])
+end
+
+def update
+  onepayment=Onepayment.find(params[:id])
+  if onepayment.update(onepayment_params)
+    redirect_to root_path
+  else
+    render :edit
+  end
+end
+
+
 
 private
 def onepayment_params
