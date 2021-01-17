@@ -17,7 +17,7 @@
       <div class="header-users">
       <%if user_signed_in?%>
       <div>
-        <li><%= link_to current_user.nickname, '/#', class: "header-user" %></li>
+        <li><%= link_to 'My収支',  "/users/#{current_user.id}", class: "header-user" %></li>
         </div>
         <div>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-user" %></li>
@@ -31,11 +31,7 @@
         </div>
         <%end%>
       </div>
-      <!--ログインしている時の表示
-      <div class="header-users">
-        <div>ユーザー名</div>
-        <div>ログアウト</div>
-      </ul>-->
+
   </div>
 </header>
     <%= yield %>

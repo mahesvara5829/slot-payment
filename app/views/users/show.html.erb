@@ -1,9 +1,11 @@
 <div class="main">
   <div class="main-news">
     <div class="main-new">
-    <a href="/onepayments/new"class="new-botan">新規作成</a>
+    <a href="/#"class="new-botan">トップへ戻る</a>
     </div>
-
+    <div class="content-total">
+    <%="Total収支 #{@onepayments.sum(:one_balance_of_payment).to_i}円"%>
+    </div>
     
   </div>
   <div class="contents">
@@ -14,12 +16,7 @@
         <%=onepayment.month.name%>
         </div>      
         <div class="content-day">
-        <%=onepayment.day.name %>
-        </div>
-        <div class="content-nickname">
-        <a href="/users/<%= onepayment.user_id %>">
-        <%=onepayment.user.nickname %>
-        </a>
+        <%=onepayment.day.name%>
         </div>
       </div>
       <div class="payments">
@@ -41,5 +38,3 @@
 
   </div>
 </div>
-
-

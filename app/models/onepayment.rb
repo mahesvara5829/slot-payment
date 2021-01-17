@@ -6,6 +6,9 @@ class Onepayment < ApplicationRecord
   belongs_to :kisyu
 
 
+  belongs_to :user
+
+
   with_options presence: true do
     validates :month_id,:day_id,:store_id,:kisyu_id, numericality: { other_than: 1 }
     validates :one_investment, format: { with: /\A[0-9]+\z/ , message: "with a half size number"}

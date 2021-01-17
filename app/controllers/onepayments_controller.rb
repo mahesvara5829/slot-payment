@@ -1,7 +1,7 @@
 class OnepaymentsController < ApplicationController
 
 def index
-  @onepayments=Onepayment.all.order("id DESC")
+  @onepayments=Onepayment.includes(:user).order("id DESC")
 end
 
 def new
@@ -19,13 +19,18 @@ def create
 end
 
 def destroy
-  onepayment=Onepayment.find(params[:id])
-  onepayment.destroy
-  redirect_to root_path
+  @onepayment=Onepayment.find(params[:id])
+  if current_user.id==@onepayment.user_id
+    @onepayment.destroy
+    redirect_to action: :index
+  end
 end
 
 def edit
   @onepayment=Onepayment.find(params[:id])
+  unless current_user.id==@onepayment.user_id
+    redirect_to action: :index
+  end
 end
 
 def update
