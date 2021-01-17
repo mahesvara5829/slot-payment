@@ -46,7 +46,7 @@ end
 
 private
 def onepayment_params
-  params.require(:onepayment).permit(:month_id, :day_id, :store_id, :kisyu_id, :one_investment, :one_recovery, :one_balance_of_payment, :one_rationale)
+  params.require(:onepayment).permit(:month_id, :day_id, :store_id, :kisyu_id, :one_investment, :one_recovery, :one_balance_of_payment, :one_rationale).merge(user_id:current_user.id)
 end
 
 
