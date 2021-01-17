@@ -4,6 +4,8 @@
     <div class="form">
       <%= form_with model: @onepayment,url:onepayments_path, local: true do |form| %>
       
+      <%= render 'shared/error_messages', model: form.object %>
+      
 
       
        <h3>1台目</h3>
