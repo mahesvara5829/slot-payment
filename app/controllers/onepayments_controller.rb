@@ -36,6 +36,10 @@ def update
   end
 end
 
+def show
+  @onepayment=Onepayment.find(params[:id])
+end
+
 
 
 private
