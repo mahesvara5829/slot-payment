@@ -2,11 +2,13 @@
 <div class="btnbtn-top">
 <a href="/#"class="new-botan">トップへ戻る</a>
 </div>
+<%if user_signed_in?&&current_user.id==@onepayment.user_id%>
 <div class="btn">
   <%= link_to '編集', edit_onepayment_path(@onepayment.id), class: 'btns' %>
 
   <%= link_to '削除', onepayment_path(@onepayment.id), class: 'btns',method: :delete %>
 </div>
+<%end%>
 </div>
 
 <div>
