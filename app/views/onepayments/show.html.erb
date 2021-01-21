@@ -1,12 +1,16 @@
-<div>
+<div class="btnbtn">
+<div class="btnbtn-top">
 <a href="/#"class="new-botan">トップへ戻る</a>
 </div>
+<%if user_signed_in?&&current_user.id==@onepayment.user_id%>
 <div class="btn">
   <%= link_to '編集', edit_onepayment_path(@onepayment.id), class: 'btns' %>
-</div>
-<div class="btn">
+
   <%= link_to '削除', onepayment_path(@onepayment.id), class: 'btns',method: :delete %>
 </div>
+<%end%>
+</div>
+
 <div>
 <%=@onepayment.month.name%>
 <%=@onepayment.day.name%>
@@ -29,3 +33,25 @@
 <div>
 <%="メモ   #{@onepayment.one_rationale}"%>
 </div>
+
+
+
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@onepayment, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    </div>
+  </div>

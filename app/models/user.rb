@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
 
          has_many :onepayments
+         has_many :comments
 
 
          with_options presence: true do

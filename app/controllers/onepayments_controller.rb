@@ -45,6 +45,8 @@ end
 
 def show
   @onepayment=Onepayment.find(params[:id])
+  @comment = Comment.new
+  @comments = @onepayment.comments.includes(:user)
 end
 
 

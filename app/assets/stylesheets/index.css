@@ -17,10 +17,7 @@
   width:70%;
 }
 
-.new-botan{
-  text-decoration: none;
 
-}
 
 .content-total{
   width:30%;
@@ -30,7 +27,7 @@
 .contents{
   width:100vw;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   margin: 20px;
@@ -60,28 +57,24 @@
   margin: 50px 0 0 0;
 }
 
+
+
 .btn{
   text-decoration: none;
+  color:white;
 }
 
-.btn1{
+.nickname{
   text-decoration: none;
   color:white;
 }
 
-.btn2{
-  text-decoration: none;
-  color:white;
-}
-
-.btn3{
-  text-decoration: none;
-  color:white;
-}
 
 
 
   .new-botan {
+    margin: 10px 0 0 10px;
+    text-decoration: none;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;

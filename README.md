@@ -10,6 +10,7 @@
 
 ### Association
 - has_many :onepayments
+- has_many :comments
 - has_many :twopayments
 - has_many :threepayments
 - has_many :fourpayments
@@ -32,6 +33,20 @@
 
 ### Association
 - belongs_to :user
+- has_many :comments
+
+
+## comments テーブル
+
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| user_id      | integer | null: false |
+| onepayment_id| integer | null: false |
+| text         | text    | null: false |
+
+### Association
+- belongs_to :user
+- belongs_to :onepayment
 
 
 
