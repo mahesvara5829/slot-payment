@@ -8,6 +8,9 @@
     </div>
     
   </div>
+  <div class="chart">
+  <%= column_chart @onepayments.group_by_day(:created_at).sum(:one_balance_of_payment), width: "800px", height: "300px" %>
+  </div>
   <div class="contents">
   <%@onepayments.each do |onepayment|%>
     <div class="content">
@@ -35,6 +38,9 @@
       </div>
     </div>
     <% end %>
+    
 
   </div>
 </div>
+
+	
