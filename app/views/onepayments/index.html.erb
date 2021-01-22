@@ -27,14 +27,14 @@
       </div>
       <div class="three-btn">
         <div class="btn">
-        <%= link_to '詳細', onepayment_path(onepayment.id), class: 'btn' %>
+        <%= link_to '詳細', onepayment_path(onepayment.id),  id:'btn',class: 'btn' %>
         </div>
         <%if user_signed_in?&&current_user.id==onepayment.user_id%>
         <div class="btn">
-        <%= link_to '編集', edit_onepayment_path(onepayment.id), class: 'btn' %>
+        <%= link_to '編集', edit_onepayment_path(onepayment.id),  id:'btn',class: 'btn' %>
         </div>
         <div class="btn">
-        <%= link_to '削除', onepayment_path(onepayment.id), class: 'btn',method: :delete %>
+        <%= link_to '削除', onepayment_path(onepayment.id), id:'btn',class: 'btn',method: :delete %>
         </div>
         <%end%>
       </div>

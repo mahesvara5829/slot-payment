@@ -9,7 +9,7 @@
     
   </div>
   <div class="chart">
-  <%= column_chart @onepayments.group_by_day(:created_at).sum(:one_balance_of_payment), width: "800px", height: "300px" %>
+  <%= column_chart @onepayments.group_by_day(:created_at).sum(:one_balance_of_payment), width: "90%", height: "300px" %>
   </div>
   <div class="contents">
   <%@onepayments.each do |onepayment|%>
@@ -27,13 +27,13 @@
       </div>
       <div class="three-btn">
         <div class="btn">
-        <%= link_to '詳細', onepayment_path(onepayment.id), class: 'btn' %>
+        <%= link_to '詳細', onepayment_path(onepayment.id),  id:'btn',class: 'btn' %>
         </div>
         <div class="btn">
-        <%= link_to '編集', edit_onepayment_path(onepayment.id), class: 'btn' %>
+        <%= link_to '編集', edit_onepayment_path(onepayment.id),  id:'btn',class: 'btn' %>
         </div>
         <div class="btn">
-        <%= link_to '削除', onepayment_path(onepayment.id), class: 'btn',method: :delete %>
+        <%= link_to '削除', onepayment_path(onepayment.id),  id:'btn',class: 'btn',method: :delete %>
         </div>
       </div>
     </div>
